@@ -1,0 +1,701 @@
+/* Educational Pages Shared Styles */
+
+.educational-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 2rem;
+}
+
+/* Hero Variations */
+.spot-scams-hero {
+    background: linear-gradient(135deg, #dc2626 0%, #f59e0b 100%);
+}
+
+.recovery-hero {
+    background: linear-gradient(135deg, #059669 0%, #10b981 100%);
+}
+
+.safety-hero {
+    background: linear-gradient(135deg, #7c3aed 0%, #a78bfa 100%);
+}
+
+/* Introduction Section */
+.intro-section {
+    background: white;
+    padding: 2.5rem;
+    border-radius: 16px;
+    margin-bottom: 3rem;
+    box-shadow: 0 4px 20px rgba(0,0,0,0.08);
+}
+
+.intro-text {
+    font-size: 1.125rem;
+    line-height: 1.8;
+    color: #475569;
+    margin-bottom: 2rem;
+}
+
+.stat-highlight {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 1.5rem;
+    margin-top: 2rem;
+}
+
+.stat-box {
+    background: linear-gradient(135deg, #dbeafe 0%, #bfdbfe 100%);
+    padding: 2rem;
+    border-radius: 12px;
+    text-align: center;
+}
+
+.stat-number {
+    font-size: 2.5rem;
+    font-weight: 700;
+    color: #1e3a8a;
+    margin-bottom: 0.5rem;
+}
+
+.stat-label {
+    font-size: 0.95rem;
+    color: #475569;
+    font-weight: 500;
+}
+
+.key-principle {
+    background: #fef3c7;
+    border-left: 5px solid #f59e0b;
+    padding: 1.5rem;
+    border-radius: 0 12px 12px 0;
+    margin-top: 2rem;
+}
+
+.key-principle h3 {
+    color: #92400e;
+    margin-bottom: 0.75rem;
+}
+
+/* Content Sections */
+.content-section {
+    background: white;
+    padding: 2.5rem;
+    border-radius: 16px;
+    margin-bottom: 2rem;
+    box-shadow: 0 4px 20px rgba(0,0,0,0.08);
+}
+
+.section-title {
+    font-size: 2rem;
+    color: #1e3a8a;
+    margin-bottom: 1.5rem;
+    padding-bottom: 1rem;
+    border-bottom: 3px solid #3b82f6;
+}
+
+.section-intro {
+    font-size: 1.125rem;
+    color: #475569;
+    margin-bottom: 2rem;
+    line-height: 1.7;
+}
+
+/* Red Flags Grid */
+.red-flags-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 1.5rem;
+}
+
+.flag-card {
+    padding: 1.5rem;
+    border-radius: 12px;
+    border-left: 5px solid;
+}
+
+.flag-card.critical {
+    background: #fee2e2;
+    border-color: #dc2626;
+}
+
+.flag-card.warning {
+    background: #fed7aa;
+    border-color: #ea580c;
+}
+
+.flag-card.caution {
+    background: #fef3c7;
+    border-color: #f59e0b;
+}
+
+.flag-icon {
+    font-size: 2.5rem;
+    margin-bottom: 1rem;
+}
+
+.flag-card h3 {
+    color: #1e293b;
+    margin-bottom: 1rem;
+}
+
+.flag-card ul {
+    margin: 0.75rem 0;
+    padding-left: 1.5rem;
+}
+
+.flag-card li {
+    margin-bottom: 0.5rem;
+    color: #475569;
+}
+
+.flag-action {
+    background: rgba(255,255,255,0.8);
+    padding: 1rem;
+    border-radius: 8px;
+    margin-top: 1rem;
+    font-weight: 600;
+}
+
+/* Accordion Styles */
+.scam-type-accordion {
+    margin-top: 2rem;
+}
+
+.accordion-item {
+    background: white;
+    border: 2px solid #e2e8f0;
+    border-radius: 12px;
+    margin-bottom: 1rem;
+    overflow: hidden;
+}
+
+.accordion-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1.5rem;
+    cursor: pointer;
+    background: #f8f9fa;
+    transition: all 0.3s ease;
+}
+
+.accordion-header:hover {
+    background: #e0f2fe;
+}
+
+.accordion-header h3 {
+    margin: 0;
+    color: #1e3a8a;
+}
+
+.accordion-toggle {
+    font-size: 2rem;
+    font-weight: 300;
+    color: #3b82f6;
+    transition: transform 0.3s ease;
+}
+
+.accordion-item.active .accordion-toggle {
+    transform: rotate(45deg);
+}
+
+.accordion-content {
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.3s ease;
+}
+
+.accordion-item.active .accordion-content {
+    max-height: 2000px;
+}
+
+.warning-signs, .verification-steps, .real-example {
+    padding: 1.5rem;
+}
+
+.warning-signs {
+    background: #fef3c7;
+}
+
+.verification-steps {
+    background: #d1fae5;
+}
+
+.real-example {
+    background: #e0f2fe;
+    border-top: 2px solid #3b82f6;
+}
+
+.warning-signs h4 {
+    color: #92400e;
+    margin-bottom: 1rem;
+}
+
+.verification-steps h4 {
+    color: #065f46;
+    margin-bottom: 1rem;
+}
+
+/* Checklist Styles */
+.checklist-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2rem;
+    margin-top: 2rem;
+}
+
+.checklist-column h3 {
+    color: #1e3a8a;
+    margin-bottom: 1.5rem;
+}
+
+.checklist {
+    display: flex;
+    flex-direction: column;
+    gap: 0.75rem;
+}
+
+.checklist-item {
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+    padding: 0.75rem;
+    background: #f8f9fa;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: all 0.2s ease;
+}
+
+.checklist-item:hover {
+    background: #e0f2fe;
+}
+
+.checklist-item input[type="checkbox"] {
+    width: 20px;
+    height: 20px;
+    cursor: pointer;
+}
+
+.checklist-item.warning-check {
+    background: #fee2e2;
+}
+
+.checklist-item.warning-check:hover {
+    background: #fecaca;
+}
+
+.checklist-note {
+    background: #fef3c7;
+    padding: 1rem;
+    border-radius: 8px;
+    margin-top: 1rem;
+    font-weight: 600;
+    color: #92400e;
+}
+
+/* Gut Check Section */
+.gut-check-content {
+    background: linear-gradient(135deg, #dbeafe 0%, #e0f2fe 100%);
+    padding: 2rem;
+    border-radius: 12px;
+}
+
+.gut-check-box h3 {
+    color: #1e3a8a;
+    margin-bottom: 1rem;
+}
+
+.gut-feelings {
+    background: white;
+    padding: 1.5rem;
+    border-radius: 8px;
+    margin: 1.5rem 0;
+}
+
+.gut-feelings h4 {
+    color: #1e3a8a;
+    margin-bottom: 1rem;
+}
+
+.gut-action {
+    background: #fee2e2;
+    padding: 1rem;
+    border-radius: 8px;
+    margin-top: 1rem;
+    color: #dc2626;
+    font-weight: 700;
+    font-size: 1.125rem;
+}
+
+.golden-rules {
+    background: #fef3c7;
+    padding: 1.5rem;
+    border-radius: 8px;
+}
+
+.golden-rules h4 {
+    color: #92400e;
+    margin-bottom: 1rem;
+}
+
+.golden-rules ol {
+    padding-left: 1.5rem;
+}
+
+.golden-rules li {
+    margin-bottom: 0.75rem;
+    color: #475569;
+}
+
+/* Help Section */
+.help-section {
+    background: linear-gradient(135deg, #1e3a8a 0%, #3b82f6 100%);
+    color: white;
+    padding: 3rem 2rem;
+    border-radius: 16px;
+    text-align: center;
+}
+
+.help-section h2 {
+    font-size: 2.5rem;
+    margin-bottom: 2rem;
+}
+
+.help-options {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 2rem;
+    margin: 2rem 0;
+}
+
+.help-card {
+    background: rgba(255,255,255,0.1);
+    padding: 2rem;
+    border-radius: 12px;
+    backdrop-filter: blur(10px);
+}
+
+.help-card h3 {
+    margin-bottom: 1rem;
+}
+
+.help-button {
+    display: inline-block;
+    padding: 0.75rem 1.5rem;
+    background: white;
+    color: #1e3a8a;
+    text-decoration: none;
+    border-radius: 8px;
+    font-weight: 600;
+    margin-top: 1rem;
+    transition: all 0.3s ease;
+}
+
+.help-button:hover {
+    background: #f8f9fa;
+    transform: translateY(-2px);
+}
+
+.help-footer {
+    margin-top: 2rem;
+    opacity: 0.9;
+}
+
+/* Recovery Page Specific */
+.urgent-alert {
+    background: linear-gradient(135deg, #dc2626 0%, #f59e0b 100%);
+    color: white;
+    padding: 2rem;
+    border-radius: 16px;
+    display: flex;
+    align-items: center;
+    gap: 1.5rem;
+    margin-bottom: 3rem;
+    box-shadow: 0 4px 20px rgba(220, 38, 38, 0.3);
+}
+
+.alert-icon {
+    font-size: 3rem;
+    flex-shrink: 0;
+}
+
+.timeline {
+    position: relative;
+    padding-left: 3rem;
+}
+
+.timeline::before {
+    content: '';
+    position: absolute;
+    left: 20px;
+    top: 0;
+    bottom: 0;
+    width: 3px;
+    background: linear-gradient(to bottom, #dc2626, #f59e0b, #059669);
+}
+
+.timeline-item {
+    position: relative;
+    margin-bottom: 2rem;
+    background: white;
+    padding: 2rem;
+    border-radius: 12px;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+}
+
+.timeline-badge {
+    position: absolute;
+    left: -3rem;
+    top: 2rem;
+    background: #1e3a8a;
+    color: white;
+    padding: 0.5rem 1rem;
+    border-radius: 20px;
+    font-weight: 700;
+    font-size: 0.875rem;
+    white-space: nowrap;
+}
+
+.timeline-item.urgent .timeline-badge {
+    background: #dc2626;
+}
+
+.timeline-item.critical .timeline-badge {
+    background: #f59e0b;
+}
+
+.timeline-item.important .timeline-badge {
+    background: #059669;
+}
+
+.timeline-content h3 {
+    color: #1e3a8a;
+    margin-bottom: 1rem;
+}
+
+.institution-contacts {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 1.5rem;
+    margin-top: 1.5rem;
+}
+
+.contact-card {
+    background: #f8f9fa;
+    padding: 1.5rem;
+    border-radius: 8px;
+    border-top: 4px solid #3b82f6;
+}
+
+.contact-card h4 {
+    color: #1e3a8a;
+    margin-bottom: 1rem;
+}
+
+.recovery-chance {
+    margin-top: 1rem;
+    padding: 0.5rem;
+    border-radius: 6px;
+    font-weight: 600;
+}
+
+.authority-list {
+    margin-top: 1.5rem;
+}
+
+.authority-item {
+    background: #f8f9fa;
+    padding: 1.5rem;
+    border-radius: 8px;
+    margin-bottom: 1rem;
+}
+
+.authority-item h4 {
+    color: #1e3a8a;
+    margin-bottom: 0.75rem;
+}
+
+.why-important {
+    background: #dbeafe;
+    padding: 0.75rem;
+    border-radius: 6px;
+    margin-top: 0.75rem;
+    font-size: 0.95rem;
+}
+
+.documentation-checklist {
+    margin-top: 1.5rem;
+}
+
+.doc-item {
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+    padding: 0.75rem;
+    background: #f8f9fa;
+    border-radius: 6px;
+    margin-bottom: 0.5rem;
+}
+
+.documentation-tips {
+    background: #fef3c7;
+    padding: 1.5rem;
+    border-radius: 8px;
+    margin-top: 1.5rem;
+}
+
+.security-actions {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 1.5rem;
+    margin-top: 1.5rem;
+}
+
+.security-section {
+    background: #f8f9fa;
+    padding: 1.5rem;
+    border-radius: 8px;
+}
+
+.security-section h4 {
+    color: #1e3a8a;
+    margin-bottom: 1rem;
+}
+
+/* Habits Grid */
+.habits-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+    gap: 1.5rem;
+    margin-top: 2rem;
+}
+
+.habit-card {
+    background: #f8f9fa;
+    padding: 2rem;
+    border-radius: 12px;
+    border-top: 4px solid #3b82f6;
+}
+
+.habit-icon {
+    font-size: 2.5rem;
+    margin-bottom: 1rem;
+}
+
+.habit-card h3 {
+    color: #1e3a8a;
+    margin-bottom: 1rem;
+}
+
+.habit-list {
+    list-style: none;
+    padding: 0;
+}
+
+.habit-list li {
+    padding: 0.5rem 0;
+    border-bottom: 1px solid #e2e8f0;
+}
+
+.habit-list li:last-child {
+    border-bottom: none;
+}
+
+.habit-action {
+    background: #dbeafe;
+    padding: 1rem;
+    border-radius: 8px;
+    margin-top: 1rem;
+    font-weight: 600;
+    color: #1e40af;
+}
+
+/* Emergency Section */
+.emergency-steps {
+    display: grid;
+    gap: 1.5rem;
+    margin-top: 2rem;
+}
+
+.emergency-step {
+    display: flex;
+    gap: 1.5rem;
+    background: white;
+    padding: 2rem;
+    border-radius: 12px;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+}
+
+.step-number {
+    flex-shrink: 0;
+    width: 50px;
+    height: 50px;
+    background: #1e3a8a;
+    color: white;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.5rem;
+    font-weight: 700;
+}
+
+.step-content h3 {
+    color: #1e3a8a;
+    margin-bottom: 1rem;
+}
+
+.final-reminder {
+    background: linear-gradient(135deg, #059669 0%, #10b981 100%);
+    color: white;
+    padding: 3rem 2rem;
+    border-radius: 16px;
+    text-align: center;
+}
+
+.power-points {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 2rem;
+    margin: 2rem 0;
+}
+
+.power-point {
+    background: rgba(255,255,255,0.1);
+    padding: 2rem;
+    border-radius: 12px;
+    backdrop-filter: blur(10px);
+}
+
+.power-point strong {
+    display: block;
+    font-size: 1.25rem;
+    margin-bottom: 0.75rem;
+}
+
+@media (max-width: 768px) {
+    .red-flags-grid, .habits-grid, .help-options, .institution-contacts, .security-actions, .power-points {
+        grid-template-columns: 1fr;
+    }
+    
+    .stat-highlight {
+        grid-template-columns: 1fr;
+    }
+    
+    .checklist-container {
+        grid-template-columns: 1fr;
+    }
+    
+    .timeline {
+        padding-left: 2rem;
+    }
+    
+    .timeline::before {
+        left: 10px;
+    }
+    
+    .timeline-badge {
+        left: -2rem;
+        font-size: 0.75rem;
+        padding: 0.25rem 0.5rem;
+    }
+}
