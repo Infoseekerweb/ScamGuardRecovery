@@ -1,0 +1,267 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ScamGuard Recovery - Community Scam Database & Warning Platform</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <nav>
+            <div class="logo">
+                <img src="scamguard-logo.png" alt="ScamGuard Recovery Logo">
+            </div>
+            <ul class="nav-links">
+                <li><a href="#home">Home</a></li>
+                <li><a href="#search">Search Scams</a></li>
+                <li><a href="#report">Report Scam</a></li>
+                <li><a href="#database">Database</a></li>
+            </ul>
+            <button class="mobile-menu-toggle" aria-label="Toggle menu">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+        </nav>
+    </header>
+
+    <div class="hero">
+        <h1 class="fade-in">Protect Yourself from Scams</h1>
+        <p class="fade-in">Community-powered scam database helping thousands avoid fraud. Search, report, and stay informed.</p>
+        <div class="stats">
+            <div class="stat fade-in">
+                <div class="stat-number" id="totalReports">0</div>
+                <div class="stat-label">Scams Reported</div>
+            </div>
+            <div class="stat fade-in">
+                <div class="stat-number" id="totalUsers">0</div>
+                <div class="stat-label">Protected Users</div>
+            </div>
+            <div class="stat fade-in">
+                <div class="stat-number" id="preventedLoss">$0</div>
+                <div class="stat-label">Potential Losses Prevented</div>
+            </div>
+        </div>
+    </div>
+
+    <div class="search-section">
+        <div class="search-box">
+            <h2>Check if something is a scam</h2>
+            <div class="search-input-wrapper">
+                <input 
+                    type="text" 
+                    class="search-input" 
+                    id="searchInput"
+                    placeholder="Enter website URL, email, phone number, or company name..."
+                    autocomplete="off"
+                >
+                <button class="search-btn" id="searchBtn">
+                    <span class="search-icon">🔍</span>
+                    <span class="search-text">Search</span>
+                </button>
+            </div>
+            <div class="search-examples">
+                Examples: "crypto-invest.com", "support@paypal-secure.com", "+1-800-123-4567"
+            </div>
+        </div>
+    </div>
+
+    <div class="container">
+        <div id="searchResults" class="search-results hidden">
+            <h2>Search Results</h2>
+            <div id="resultsContent"></div>
+        </div>
+
+        <!-- About Section -->
+        <div class="about-section">
+            <div class="about-content">
+                <h2>About ScamGuard Recovery</h2>
+                
+                <p>Welcome to <strong>ScamGuard Recovery</strong>, a community-powered platform dedicated to protecting individuals from online fraud and helping victims trace lost funds and digital assets.</p>
+                
+                <p>Founded by <strong>infoseeker_web</strong>, our platform was born from a simple yet powerful mission: to create a safe space where people can share their experiences, warn others about active scams, and collaborate on recovering stolen assets. In a digital world where scammers constantly evolve their tactics, collective vigilance is our strongest defense.</p>
+
+                <h3>🎯 Our Mission</h3>
+                <p>We believe that knowledge shared is power multiplied. ScamGuard Recovery serves as a central hub where victims become advocates, helping others avoid the same traps. Whether you've lost money to a cryptocurrency scam, investment fraud, romance scam, or phishing attack, you're not alone—and your story can save someone else.</p>
+
+                <h3>🛡️ What We Do</h3>
+                <ul>
+                    <li><strong>Community Reporting:</strong> Users submit detailed scam reports to help others identify and avoid fraudulent schemes.</li>
+                    <li><strong>Real-Time Alerts:</strong> Our database is constantly updated with the latest scams, giving you instant access to threat intelligence.</li>
+                    <li><strong>Asset Tracing Support:</strong> We connect victims with resources and investigative techniques to trace lost funds online.</li>
+                    <li><strong>Verification System:</strong> Community voting helps surface the most credible and urgent scam warnings.</li>
+                    <li><strong>Education & Prevention:</strong> Learn how scammers operate and how to protect yourself before it's too late.</li>
+                </ul>
+
+                <h3>👥 Our Community</h3>
+                <p>ScamGuard Recovery is built by and for people who refuse to let scammers win. Our community includes fraud survivors, cybersecurity enthusiasts, digital investigators, and everyday internet users who care about protecting others. Many know our founder as <strong>infoseeker_web</strong>—a trusted voice in the fight against online fraud.</p>
+
+                <h3>⚖️ Our Commitment</h3>
+                <p>We operate with complete transparency and integrity. ScamGuard Recovery does not promise asset recovery services—we provide <em>information, resources, and community support</em>. For actual fund recovery, we always recommend working with law enforcement, licensed attorneys, and regulated financial institutions.</p>
+
+                <div class="warning-box">
+                    <p>⚠️ Remember: If someone promises guaranteed recovery of your lost funds for an upfront fee, that itself is likely a scam. Always verify and research before trusting anyone with your case.</p>
+                </div>
+
+                <p class="closing-statement"><strong>Together, we're making the internet safer—one report at a time.</strong></p>
+            </div>
+        </div>
+
+        <!-- Success Stories Section -->
+        <div class="success-section">
+            <h2>💪 Community Success Stories</h2>
+            <p class="section-subtitle">Real people who used our platform to identify scams and protect their assets</p>
+
+            <div class="testimonials-grid" id="testimonialsGrid"></div>
+
+            <div class="cta-box">
+                <h3>Your Story Could Save Someone</h3>
+                <p>Have you encountered a scam? Connect with us on Instagram to report it and help protect others in our community.</p>
+                <a href="https://www.instagram.com/infoseeker_web/" target="_blank" rel="noopener noreferrer" class="cta-button">
+                    Report now
+                </a>
+            </div>
+        </div>
+
+        <!-- Tabs Section -->
+        <div class="tabs">
+            <button class="tab active" data-tab="recent">Recent Reports</button>
+            <button class="tab" data-tab="trending">Trending Scams</button>
+            <button class="tab" data-tab="report">Report a Scam</button>
+        </div>
+
+        <div id="recentTab" class="tab-content active">
+            <div class="filters" id="filters"></div>
+            <div class="scam-grid" id="scamGrid"></div>
+        </div>
+
+        <div id="trendingTab" class="tab-content">
+            <h2>🔥 Most Reported Scams This Week</h2>
+            <div class="scam-grid" id="trendingGrid"></div>
+        </div>
+
+        <div id="reportTab" class="tab-content">
+            <div class="success-message" id="successMessage">
+                ✅ Thank you! Your report has been submitted and will help protect others.
+            </div>
+
+            <div class="report-form">
+                <h2>Report a Scam</h2>
+                <form id="reportForm">
+                    <div class="form-group">
+                        <label class="form-label">Scam Type *</label>
+                        <select class="form-select" id="scamType" required>
+                            <option value="">Select a type...</option>
+                            <option value="crypto">Cryptocurrency Scam</option>
+                            <option value="investment">Investment/Ponzi Scheme</option>
+                            <option value="romance">Romance Scam</option>
+                            <option value="phishing">Phishing/Email Scam</option>
+                        </select>
+                    </div>
+
+                    <div class="form-group">
+                        <label class="form-label">Scam Title/Name *</label>
+                        <input 
+                            type="text" 
+                            class="form-input" 
+                            id="scamTitle"
+                            placeholder="e.g., Bitcoin Doubler Scheme, Fake Amazon Support"
+                            required
+                        >
+                    </div>
+
+                    <div class="form-group">
+                        <label class="form-label">Website/Contact Info</label>
+                        <input 
+                            type="text" 
+                            class="form-input" 
+                            id="scamContact"
+                            placeholder="Website URL, email, phone number, or social media profile"
+                        >
+                    </div>
+
+                    <div class="form-group">
+                        <label class="form-label">Description *</label>
+                        <textarea 
+                            class="form-textarea" 
+                            id="scamDescription"
+                            placeholder="Describe how the scam works, what happened to you or others, red flags to watch for..."
+                            required
+                        ></textarea>
+                    </div>
+
+                    <div class="form-group">
+                        <label class="form-label">Estimated Loss (if any)</label>
+                        <input 
+                            type="text" 
+                            class="form-input" 
+                            id="scamLoss"
+                            placeholder="e.g., $5,000 (optional)"
+                        >
+                    </div>
+
+                    <div class="form-group">
+                        <label class="form-label">Danger Level *</label>
+                        <select class="form-select" id="dangerLevel" required>
+                            <option value="">Select danger level...</option>
+                            <option value="1">Low - Suspicious but unconfirmed</option>
+                            <option value="2">Medium - Likely scam with some evidence</option>
+                            <option value="3">High - Confirmed scam with victims</option>
+                        </select>
+                    </div>
+
+                    <button type="submit" class="submit-btn">
+                        <span class="btn-text">Submit Report</span>
+                        <span class="btn-loader hidden">Submitting...</span>
+                    </button>
+                </form>
+            </div>
+        </div>
+    </div>
+
+    <footer>
+        <div class="footer-content">
+            <div class="footer-section">
+                <h3>About ScamGuard Recovery</h3>
+                <p>Founded by infoseeker_web, ScamGuard Recovery is a community-driven platform dedicated to protecting people from online fraud and helping victims trace lost funds and assets. Our mission is to empower individuals through shared knowledge, real-time scam alerts, and collaborative investigation efforts. Together, we're building a safer digital world.</p>
+            </div>
+            <div class="footer-section">
+                <h3>Resources</h3>
+                <ul>
+                    <li><a href="#">How to Spot Scams</a></li>
+                    <li><a href="#">Report to Authorities</a></li>
+                    <li><a href="#">Recovery Resources</a></li>
+                    <li><a href="#">Safety Tips</a></li>
+                </ul>
+            </div>
+            <div class="footer-section">
+                <h3>Report to Officials</h3>
+                <ul>
+                    <li><a href="https://www.ic3.gov" target="_blank">FBI IC3</a></li>
+                    <li><a href="https://www.ftc.gov/complaint" target="_blank">FTC Complaint</a></li>
+                    <li><a href="https://www.usa.gov/stop-scams-frauds" target="_blank">USA.gov Scam Resources</a></li>
+                </ul>
+            </div>
+            <div class="footer-section">
+                <h3>Legal</h3>
+                <ul>
+                    <li><a href="#">Privacy Policy</a></li>
+                    <li><a href="#">Terms of Service</a></li>
+                    <li><a href="#">Contact Us</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>© 2024 ScamGuard Recovery. For informational purposes only. Always verify with official authorities.</p>
+        </div>
+    </footer>
+
+    <!-- Scroll to Top Button -->
+    <button id="scrollToTop" class="scroll-to-top hidden" aria-label="Scroll to top">
+        ↑
+    </button>
+
+    <script src="script.js"></script>
+</body>
+</html>
